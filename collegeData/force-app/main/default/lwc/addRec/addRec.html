@@ -1,0 +1,19 @@
+<template>
+    <div class="modal">
+        <div class="modal-content">
+            <lightning-input label="College Name" type="text" onchange={getName} value={cName}></lightning-input>
+            <lightning-input label="Marks" type="Number" onchange={getMark} value={cMark}></lightning-input>
+            <lightning-combobox
+            label="Status"
+            placeholder="Select options"
+            value={cStatus}
+            options={choices}
+            onchange={getStatus}></lightning-combobox>
+
+            <footer class="slds-modal__footer">
+                <button class="slds-button slds-button_brand" onclick={saveMethod}>Save</button>
+                <button class="slds-button slds-button_brand" onclick={cancelMethod}>Cancel</button>
+                </footer>
+        </div>
+    </div>
+</template>

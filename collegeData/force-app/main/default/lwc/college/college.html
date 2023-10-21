@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Add Data" icon-name="custom:custom14">
+        <div class="slds-m-arround_medium">
+            <lightning-button variant="brand" onclick={showMod} label="ADD"></lightning-button>
+        </div>
+        <template if:true={showModal}>
+            <c-add-rec onclose={closeMod}></c-add-rec>
+        </template>
+     </lightning-card>
+      <lightning-card title="Fetched Data" icon-name="custom:custom17">
+        <div class="slds-m-arround_medium"></div>
+        <div>
+            <c-show-comp></c-show-comp>
+        </div>
+       
+    
+    </lightning-card> 
+</template>

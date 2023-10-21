@@ -1,0 +1,27 @@
+<template>
+<lightning-layout-item >
+    <lightning-input class="slds-var-m-around_small" type='text' value={searchVal} onchange={SearchD} ></lightning-input>
+<lightning-button class="slds-var-m-around_small" label="Search" onclick={searchData}></lightning-button>
+</lightning-layout-item>
+<template if:true={fixedData}>
+    <lightning-datatable 
+    data={fixedData}
+    key-field="Id"
+    columns={col}>
+</lightning-datatable>
+</template>
+
+<footer>
+<lightning-layout>
+    <c-prev-comp onback={prevData}></c-prev-comp>
+    <lightning-layout-item flexibility="grow" class="slds-var-m-around_small">
+        <p  class="slds-text-align_center"> Page :{currentP} of {totalP}.</p>
+    </lightning-layout-item>
+    <c-next-comp onahead={nextData}></c-next-comp>
+</lightning-layout>
+
+</footer>  
+
+    
+    
+</template>
